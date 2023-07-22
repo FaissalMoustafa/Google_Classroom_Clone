@@ -65,7 +65,7 @@ form {
   margin: 0.5em 0;
 }
 
-input {
+.label-input input {
   width: 60%;
   padding: 0.7em 1.2em;
   border: 1px solid #fff;
@@ -77,9 +77,22 @@ input:focus {
   background-color: #e6fcdf;
 }
 
-label {
+.label-input label {
   font-size: 1em;
   font-weight: 600;
+}
+
+.user-type {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.types {
+  display: flex;
+  justify-content: space-between;
+  width: 57%;
+  font-weight: 500;
 }
 
 button {

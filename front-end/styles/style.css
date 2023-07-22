@@ -128,7 +128,7 @@ a {
   margin: 0.2em 0;
 }
 
-.container a {
+#forgot {
   align-self: flex-start;
   margin-left: 3em;
 }

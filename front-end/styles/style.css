@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #e8e3e3;
+  background-color: rgb(226, 254, 216);
 }
 
 .container {
@@ -35,18 +35,26 @@ body {
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  height: 8em;
+  height: 10em;
+  width: 100%;
+}
+
+.form-header h1 {
+  margin-top: 0.5em;
+  width: 100%;
+  border-radius: 0.2em;
+  padding: 0.4em 0;
 }
 
 .form-header img {
-  width: 7em;
-  height: 4em;
+  width: 9em;
+  height: 6em;
 }
 
 form {
   display: flex;
   flex-flow: column;
-  margin: 2em 0;
+  margin: 1em 0 2em 0;
   width: 18em;
 }
 
@@ -79,7 +87,8 @@ button {
   border-radius: 0.5em;
   background-color: rgb(10, 150, 5);
   color: white;
-  font-weight: 800;
+  font-size: 1em;
+  font-weight: 700;
   padding: 0.7em 1em;
   cursor: pointer;
 }
@@ -89,7 +98,7 @@ button:hover {
 }
 
 .bottom-form {
-  margin-top: 1.5em;
+  margin-top: 2em;
   width: 18em;
   display: flex;
   justify-content: space-between;

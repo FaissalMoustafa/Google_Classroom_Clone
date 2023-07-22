@@ -19,31 +19,34 @@
         </div>
 
         <form id="form">
-            <div class="label-input">
+            <div class="user-info">
 
-                <label for="firstname">First Name </label>
-                <input id="firstname" name="firstname" type="text" required placeholder="First Name" tabindex="10">
-            </div>
-            <div class="label-input">
+                <div class="label-input">
 
-                <label for="lastname">Last Name </label>
-                <input id="lastname" name="lastname" type="text" required placeholder="Last Name" tabindex="10">
-            </div>
-            <div class="label-input">
+                    <label for="firstname">First Name </label>
+                    <input id="firstname" name="firstname" type="text" required placeholder="First Name" tabindex="10">
+                </div>
+                <div class="label-input">
 
-                <label for="email">Email </label>
-                <input id="email" name="email" type="email" required placeholder="Email" tabindex="10">
-            </div>
-            <div class="label-input">
+                    <label for="lastname">Last Name </label>
+                    <input id="lastname" name="lastname" type="text" required placeholder="Last Name" tabindex="10">
+                </div>
+                <div class="label-input">
 
-                <label for="password">Password </label>
-                <input id="password" name="password" type="password" required placeholder="Password">
-            </div>
-            <div class="label-input">
+                    <label for="email">Email </label>
+                    <input id="email" name="email" type="email" required placeholder="Email" tabindex="10">
+                </div>
+                <div class="label-input">
 
-                <label for="check-password">Confirm Pass </label>
-                <input id="check-password" name="check-password" type="password" required
-                    placeholder="Confirm Password">
+                    <label for="password">Password </label>
+                    <input id="password" name="password" type="password" required placeholder="Password">
+                </div>
+                <div class="label-input">
+
+                    <label for="check-password">Confirm Pass </label>
+                    <input id="check-password" name="check-password" type="password" required
+                        placeholder="Confirm Password">
+                </div>
             </div>
 
             <div class="user-type">
@@ -51,21 +54,21 @@
                 <div class="types">
                     <div class="label-radio">
 
-                        <input type="radio" name="type" value="student">
+                        <input required type="radio" name="type" value="student">
                         <label for="student">Student</label>
                     </div>
                     <div class="label-radio">
 
-                        <input type="radio" name="type" value="teacher">
+                        <input required type="radio" name="type" value="teacher">
                         <label for="teacher">Teacher</label>
                     </div>
 
                 </div>
             </div>
 
+            <button type="submit" id="sign-up">Sign Up</button>
         </form>
 
-        <button type="submit" id="sign-up">Sign Up</button>
 
         <div class="bottom-form">
             <p>Already have an account?</p>
@@ -76,9 +79,9 @@
 
 
     </div>
-    <script src="sources/signup.js"></script>
+    <script src="sources/signning.js"></script>
 
-    <script>pages.submit("register")</script>
+    <script>pages.submit("index")</script>
 
 </body>
 

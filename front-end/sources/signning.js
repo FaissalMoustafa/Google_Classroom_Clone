@@ -1,6 +1,6 @@
 const pages = {}
 
-pages.base_url = "http://localhost//Full-Stack-Mini-Project-Backend/";
+pages.base_url = "http://localhost//Google_Classroom_Clone/front-end/";
 
 pages.print_message = (message) =>{
     console.log(message);
@@ -50,7 +50,7 @@ pages.submit = (page) => {
             const form_data = new FormData(form)
             const data = Object.fromEntries(form_data)
             console.log(data)
-            // pages.loadFor(page,data)
+            pages.loadFor(page,data)
         }else {
             
             // Append the new error message to the form
@@ -60,4 +60,34 @@ pages.submit = (page) => {
             form.appendChild(errorDiv);
         }
     })
+}
+
+pages.page_register = async (data) => {
+    console.log("i am in register")
+    const signup_url = pages.base_url + "signup.php"
+    const response = await pages.postAPI(signup_url,data)
+    
+    if (response.status === "success") {
+        console.log(response.message)
+        window.location.href = `../templates/log_in.html`;
+    }else{
+        console.log(response.message)
+    }
+    
+}
+
+pages.page_login = async (data) => {
+    console.log("i am in login")
+    const login_url = pages.base_url + "login.php"
+    const response = await pages.postAPI(login_url,data)
+    if (response.status === "logged in") {
+        console.log(response.status)
+        // window.location.href = `dashboard.html?username=${response.username}`;
+    }else{
+        console.log(response.message)
+    }
+}
+
+pages.loadFor = (page,data) => {
+    eval("pages.page_" + page + "(" + JSON.stringify(data) + ");");
 }

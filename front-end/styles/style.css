@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.4286;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  border: 2pt rgb(255, 0, 0) solid;
+  background-color: #e8e3e3;
+}
+
+.container {
+  background: #fff;
+  padding: 3em;
+  margin: 3em;
+  width: 25em;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 1pt rgb(123, 123, 123) solid;
+  border-radius: 0.6em;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1pt rgb(0, 0, 0) solid; */
+}
+
+.form-header img {
+  /* border: 1pt rgb(0, 0, 0) solid; */
+  width: 7em;
+  height: 4em;
+}
+
+form {
+  /* border: 1pt rgb(0, 0, 0) solid; */
+  display: flex;
+  flex-flow: column;
+  margin: 2em 0;
+  width: 18em;
+}
+
+.label-input {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+}
+
+input {
+  width: 60%;
+  outline: none;
+  padding: 0.7em 1.2em;
+}
+
+button {
+  border: none;
+  border-radius: 0.5em;
+  background-color: rgb(0, 157, 255);
+  color: white;
+  font-weight: 800;
+  padding: 0.7em 1em;
+}
+
+.bottom-form {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}

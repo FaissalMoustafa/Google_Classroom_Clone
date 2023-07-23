@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif; */
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.4286;
+  min-height: 100vh;
+}
+
+.IqJTee {
+  color: #5f6368;
+  font-family: "Product Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.38125rem;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 0.5em;
+}
+
+.icon:hover {
+  padding: 1em;
+  border-radius: 1.5em;
+  background-color: #eae9e9;
+  cursor: pointer;
+}
+
+#menu {
+  font-size: 1.3em;
+}
+
+#plus {
+  font-size: 1.3em;
+}
+
+#dots {
+  width: 17px;
+  height: 17px;
+}
+
+#pro-pic {
+  width: 32px;
+  height: 32px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+  z-index: 1;
+  border-bottom: 1px solid rgb(188, 188, 188);
+  position: sticky;
+}
+
+.google-logo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: space-between;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  display: none;
+  flex-flow: column;
+  width: 300px;
+  height: 100%;
+  background-color: #fffefe;
+  border: 1pt rgb(214, 214, 214) solid;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.menu-section {
+  border-bottom: 1pt rgb(196, 196, 196) solid;
+  margin: 0 0 1em 0;
+  padding: 0.2em 0;
+  margin-left: 0;
+}
+
+#enrolled {
+  padding: 1em 0 1em 1.5em;
+  font-size: 0.95em;
+  font-weight: 700;
+  height: 1.5em;
+  color: #5f6368;
+}
+
+.menu-pages {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3em;
+  padding: 1em 0 1em 1.2em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  cursor: pointer;
+}
+
+.menu-pages:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.menu-titles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-pages h4 {
+  letter-spacing: 0.01785714em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #3c4043;
+  margin-left: 2em;
+}
+
+.menu-icons {
+  font-size: 1.35em;
+}

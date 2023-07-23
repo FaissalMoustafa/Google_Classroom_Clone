@@ -7,7 +7,7 @@
 
     $db_host= "localhost";
     $db_user= "root";
-    $db_pass= null;
+    $db_pass= "";
     $db_name= "classroom_db";
 
     $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);

@@ -94,6 +94,10 @@ nav {
   z-index: 2;
 }
 
+#side-menu a {
+  text-decoration: none;
+}
+
 .menu-section {
   border-bottom: 1pt rgb(196, 196, 196) solid;
   margin: 0 0 1em 0;

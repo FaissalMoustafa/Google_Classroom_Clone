@@ -1,101 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/profile.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <!-- <script src="https://kit.fontawesome.com/838322d488.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/838322d488.js" crossorigin="anonymous"></script>
     <link rel="icon" href="../assets/Google_Classroom_icon.png">
     <title>Classroom Settings</title>
 </head>
+
 <body>
     <nav>
-
         <div class="nav-left">
-
             <div class="icon">
-                <i class="fa-solid fa-bars " id="menu" style="color: #737373;"></i>
+                <i class="fa-solid fa-bars " title="Menu" id="menu" style="color: #737373;"></i>
             </div>
-
             <div class="google-logo">
                 <img src="../assets/googlelogo.svg" alt="google logo">
-                <span class="IqJTee">Classroom</span>
+                <span class="nav-title">Classroom</span>
             </div>
-
         </div>
         <div class="nav-right">
-
             <div class="icon">
-                <a href="../index.html">
-                    <i class="fa-solid fa-plus " id="plus" style="color: #4f4f4f;"></i>
+                <a href="#">
+                    <i class="fa-solid fa-plus " title="create a class" id="plus" style="color: #4f4f4f;"></i>
                 </a>
             </div>
-
             <div class="icon">
-                <img id="dots" src="../assets/dots-menu.png" alt="dots-menu">
+                <img id="dots" title="google apps" src="../assets/dots-menu.png" alt="dots-menu">
             </div>
-
             <div class="icon">
-                <img id="pro-pic" src="../assets/user.png" alt="profile pic">
+                <a href="./profile_edit.html"><img id="pro-pic" title="Profile" src="../assets/user.png"
+                        alt="profile pic"></a>
             </div>
         </div>
     </nav>
 
     <div id="side-menu">
-
         <div class="menu-section">
+            <a href="./home.html">
+                <div class="menu-pages">
 
-            <div class="menu-pages">
-
-                <div class="menu-titles">
-                    <i class="fa-solid fa-house menu-icons" style="color: #6b6b6b;"></i>
+                    <div class="menu-titles">
+                        <i class="fa-solid fa-house menu-icons" style="color: #6b6b6b;"></i>
+                    </div>
+                    <h4>Classes</h4>
                 </div>
-
-                <h4>Classes</h4>
-            </div>
+            </a>
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-regular fa-calendar menu-icons" style="color: #636363;"></i>
                 </div>
-
                 <h4>Calendar</h4>
             </div>
         </div>
-
         <div class="menu-section">
             <span id="enrolled">Enrolled</span>
-
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-solid fa-clipboard-check menu-icons" style="color: #696969;"></i>
                 </div>
-
                 <h4>To-do</h4>
             </div>
-
         </div>
-
         <div class="menu-section">
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-solid fa-box-archive menu-icons" style="color: #5e5e5e;"></i>
                 </div>
-
                 <h4>Archived Classes</h4>
             </div>
-            <div class="menu-pages">
 
-                <div class="menu-titles">
-                    <i class="fa-solid fa-gear menu-icons" style="color: #5e5e5e;"></i>
+            <a href="./profile_edit.html">
+                <div class="menu-pages">
+                    <div class="menu-titles">
+                        <i class="fa-solid fa-gear menu-icons" style="color: #5e5e5e;"></i>
+                    </div>
+                    <h4>Settings</h4>
                 </div>
-
-                <h4>Settings</h4>
-            </div>
-
+            </a>
         </div>
     </div>
 
@@ -112,9 +97,11 @@
                 </div>
             </div>
             <h3 class="edit-profile">Edit Profile Information</h3>
-            <div class="change-as">Change your password, edit name and email. <a class="change-link" target="_blank" href="//">Manage</a></div>
+            <div class="change-as">Change your password, edit name and email. <a class="change-link" target="_blank"
+                    href="//">Manage</a></div>
         </div>
     </div>
     <script src="../sources/script.js"></script>
 </body>
+
 </html>

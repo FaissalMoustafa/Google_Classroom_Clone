@@ -128,6 +128,11 @@ a {
   margin: 0.2em 0;
 }
 
+#forgot {
+  align-self: flex-start;
+  margin-left: 3em;
+}
+
 a:hover {
   color: rgb(14, 247, 6);
 }

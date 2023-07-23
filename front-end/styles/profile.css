@@ -60,7 +60,8 @@ body {
 }
 
 .pic-mng{
-  display: flex;
+  display: none;
+  /* flex */
   justify-content: center;
   align-content: center;
   z-index: 999;
@@ -73,15 +74,23 @@ body {
   color: #bdc9ed;
 }
 
+.pic-header, .pic-imp{
+  margin-left:10px;
+}
+
 .modal-content{
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-content: center;
   background-color: rgba(39, 38, 38, 0.89);
-  border-radius: 20px;
+  border-radius: 10px;
   width: 400px;
   height: 650px;
+}
+
+.profile-pic-modal{
+  margin:30px;
 }
 
 img{
@@ -95,9 +104,9 @@ img{
 .close-btn {
   float: left;
   cursor: pointer;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px;
+  font-size: 35px;
+  /* font-weight: bold; */
+  margin: 15px;
 }
 
 .pic-btn {
@@ -107,4 +116,5 @@ img{
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
+  width: 180px;
 }

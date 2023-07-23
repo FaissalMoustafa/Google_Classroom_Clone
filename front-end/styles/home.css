@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  /* font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif; */
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
@@ -141,4 +142,40 @@ nav {
 
 .menu-icons {
   font-size: 1.35em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: #2962ff;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.header-titles {
+  display: flex;
+  align-items: center;
+  margin-right: 0.7em;
+  margin-left: 0.1em;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+
+.header-titles:hover {
+  background-color: #bdcefd;
+  border-radius: 0.2em;
+  color: #00599d;
+}
+
+.header-titles h4 {
+  font-weight: 500;
+}
+
+.header-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 0.2em;
 }

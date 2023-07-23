@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  /* font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif; */
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
@@ -12,7 +13,7 @@ body {
   min-height: 100vh;
 }
 
-.IqJTee {
+.nav-title {
   color: #5f6368;
   font-family: "Product Sans", Arial, Helvetica, sans-serif;
   font-size: 1.38125rem;
@@ -141,4 +142,157 @@ nav {
 
 .menu-icons {
   font-size: 1.35em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: #2962ff;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.header-titles {
+  display: flex;
+  align-items: center;
+  margin-right: 0.7em;
+  margin-left: 0.1em;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+
+.header-titles:hover {
+  background-color: #bdcefd;
+  border-radius: 0.2em;
+  color: #00599d;
+}
+
+.header-titles h4 {
+  font-weight: 500;
+}
+
+.header-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 0.2em;
+}
+
+.content {
+  margin: 2em;
+}
+
+ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+ol li {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  font-size: 0.9em;
+  height: 294px;
+  width: 300px;
+  border-radius: 1em;
+}
+
+ol li:hover {
+  box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+li a {
+  text-decoration: none;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3e3e3e;
+  color: #fff;
+  padding: 1em 0.5em 0.4em 1em;
+  height: 100px;
+  width: 300px;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.card-body {
+  border-left: 1pt solid rgb(212, 212, 212);
+  border-right: 1pt solid rgb(212, 212, 212);
+  display: flex;
+  padding: 1em 0.5em 0.4em 1em;
+  height: 137px;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.card-footer {
+  border: 1pt solid rgb(212, 212, 212);
+  display: flex;
+  justify-content: flex-end;
+  height: 57px;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  width: 300px;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+.card-title:hover {
+  text-decoration: underline;
+}
+
+.text h2 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.due h4 {
+  color: rgba(0, 0, 0, 0.549);
+  font-weight: 500;
+}
+
+.due a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+.due a:hover {
+  text-decoration: underline;
+  color: #2962ff;
+}
+
+.card-icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  width: 50px;
+  height: 50px;
+}
+
+.card-footer .card-icon-container:hover {
+  border-radius: 1.5em;
+  background-color: #eae9e9;
+  cursor: pointer;
+}
+
+.card-footer-icon {
+  font-size: 1.2em;
+}
+
+li img {
+  position: relative;
+  float: right;
+  border-radius: 50%;
+  margin-top: -4em;
+  margin-right: 0.5em;
+  height: 4.6875rem;
+  width: 4.6875rem;
 }

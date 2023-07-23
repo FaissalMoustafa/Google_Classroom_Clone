@@ -13,92 +13,128 @@
 <body>
 
     <nav>
-
         <div class="nav-left">
-
             <div class="icon">
-                <i class="fa-solid fa-bars " id="menu" style="color: #737373;"></i>
+                <i class="fa-solid fa-bars " title="Menu" id="menu" style="color: #737373;"></i>
             </div>
-
             <div class="google-logo">
                 <img src="../assets/googlelogo.svg" alt="google logo">
-                <span class="IqJTee">Classroom</span>
+                <span class="nav-title">Classroom</span>
             </div>
-
         </div>
         <div class="nav-right">
-
             <div class="icon">
-                <a href="../index.html">
-                    <i class="fa-solid fa-plus " id="plus" style="color: #4f4f4f;"></i>
+                <a href="#">
+                    <i class="fa-solid fa-plus " title="create a class" id="plus" style="color: #4f4f4f;"></i>
                 </a>
             </div>
-
             <div class="icon">
-                <img id="dots" src="../assets/dots-menu.png" alt="dots-menu">
+                <img id="dots" title="google apps" src="../assets/dots-menu.png" alt="dots-menu">
             </div>
-
             <div class="icon">
-                <img id="pro-pic" src="../assets/user.png" alt="profile pic">
+                <img id="pro-pic" title="Profile" src="../assets/user.png" alt="profile pic">
             </div>
         </div>
     </nav>
 
     <div id="side-menu">
-
         <div class="menu-section">
-
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-solid fa-house menu-icons" style="color: #6b6b6b;"></i>
                 </div>
-
                 <h4>Classes</h4>
             </div>
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-regular fa-calendar menu-icons" style="color: #636363;"></i>
                 </div>
-
                 <h4>Calendar</h4>
             </div>
         </div>
-
         <div class="menu-section">
             <span id="enrolled">Enrolled</span>
-
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-solid fa-clipboard-check menu-icons" style="color: #696969;"></i>
                 </div>
-
                 <h4>To-do</h4>
             </div>
-
         </div>
-
         <div class="menu-section">
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-solid fa-box-archive menu-icons" style="color: #5e5e5e;"></i>
                 </div>
-
                 <h4>Archived Classes</h4>
             </div>
             <div class="menu-pages">
-
                 <div class="menu-titles">
                     <i class="fa-solid fa-gear menu-icons" style="color: #5e5e5e;"></i>
                 </div>
-
                 <h4>Settings</h4>
             </div>
-
         </div>
+    </div>
+
+    <header>
+        <div class="header-titles">
+            <div class="header-icon-container">
+                <i class="fa-solid fa-clipboard-check header-icons"></i>
+            </div>
+            <h4>To-do</h4>
+        </div>
+        <div class="header-titles">
+            <div class="header-icon-container">
+                <i class="fa-regular fa-calendar header-icons"></i>
+            </div>
+            <h4>Calendar</h4>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <ol>
+            <li>
+                <a href="#">
+
+                    <div class="card-head">
+                        <div class="text">
+
+                            <div class="card-title">
+                                <h2>Class Title </h2>
+                                <span> class info</span> <br>
+                            </div>
+                            <span class="card-title">department</span>
+                        </div>
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-ellipsis-vertical card-menu-icon" style="color: #ffffff;"></i>
+                        </div>
+
+                    </div>
+                </a>
+
+                <div class="card-body">
+                    <div class="due">
+                        <h4>Due Wednesday</h4>
+                        <a href="#">10:00 AM - Google_Classroom... </a>
+                    </div>
+                    <img src="../assets/user.png" alt="user pic">
+                </div>
+                <div class="card-footer">
+
+                    <div class="card-icon-container">
+                        <i class="fa-regular fa-id-badge card-footer-icon" style="color: #383838;"></i>
+                    </div>
+
+                    <div class="card-icon-container">
+                        <i class="fa-regular fa-folder-closed card-footer-icon" style="color: #242424;"></i>
+                    </div>
+
+                </div>
+            </li>
+
+        </ol>
     </div>
 
     <script src="../sources/script.js"></script>

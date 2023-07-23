@@ -120,6 +120,11 @@ nav {
   color: #5f6368;
 }
 
+.nav-class-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .nav-class-title h3 {
   font-size: 1rem;
   font-weight: 500;

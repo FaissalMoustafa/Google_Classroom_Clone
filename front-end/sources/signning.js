@@ -80,10 +80,16 @@ pages.page_login = async (data) => {
     console.log("i am in login")
     const login_url = pages.base_url + "login.php"
     const response = await pages.postAPI(login_url,data)
+    const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         console.log(response.status)
         // window.location.href = `dashboard.html?username=${response.username}`;
     }else{
+        const errorDiv = document.createElement("a");
+        errorDiv.innerText = "Forgot your Password?";
+        errorDiv.id = "error-message";
+        errorDiv.href = "../templates/forgot_pass.html";
+        forgot_div.appendChild(errorDiv);
         console.log(response.message)
     }
 }

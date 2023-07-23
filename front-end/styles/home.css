@@ -60,10 +60,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px;
+  padding: 0.8em;
   z-index: 1;
   border-bottom: 1px solid rgb(188, 188, 188);
   position: sticky;
+}
+
+.class-nav {
+  padding: 0;
 }
 
 .google-logo {
@@ -79,6 +83,48 @@ nav {
   justify-content: space-around;
   text-align: center;
   align-items: center;
+}
+
+.nav-middle {
+  display: flex;
+  align-items: center;
+}
+
+.nav-middle a {
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  color: #5f6368;
+  padding: 0.125rem 1.5rem 0 1.5rem;
+  /* border-bottom: 3px solid rgb(32, 33, 36); */
+}
+
+.nav-middle a:hover {
+  background-color: #eae9e9;
+  color: rgb(32, 33, 36);
+}
+
+.nav-class-title {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  letter-spacing: 0.025em;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #5f6368;
+}
+
+.nav-class-title h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #3c4043;
 }
 
 #side-menu {

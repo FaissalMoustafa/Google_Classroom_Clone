@@ -4,9 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <!-- <script src="https://kit.fontawesome.com/838322d488.js" crossorigin="anonymous"></script> -->
+    <link rel="icon" href="../assets/Google_Classroom_icon.png">
     <title>Classroom Settings</title>
 </head>
 <body>
+    <nav>
+
+        <div class="nav-left">
+
+            <div class="icon">
+                <i class="fa-solid fa-bars " id="menu" style="color: #737373;"></i>
+            </div>
+
+            <div class="google-logo">
+                <img src="../assets/googlelogo.svg" alt="google logo">
+                <span class="IqJTee">Classroom</span>
+            </div>
+
+        </div>
+        <div class="nav-right">
+
+            <div class="icon">
+                <a href="../index.html">
+                    <i class="fa-solid fa-plus " id="plus" style="color: #4f4f4f;"></i>
+                </a>
+            </div>
+
+            <div class="icon">
+                <img id="dots" src="../assets/dots-menu.png" alt="dots-menu">
+            </div>
+
+            <div class="icon">
+                <img id="pro-pic" src="../assets/user.png" alt="profile pic">
+            </div>
+        </div>
+    </nav>
+
+    <div id="side-menu">
+
+        <div class="menu-section">
+
+            <div class="menu-pages">
+
+                <div class="menu-titles">
+                    <i class="fa-solid fa-house menu-icons" style="color: #6b6b6b;"></i>
+                </div>
+
+                <h4>Classes</h4>
+            </div>
+            <div class="menu-pages">
+
+                <div class="menu-titles">
+                    <i class="fa-regular fa-calendar menu-icons" style="color: #636363;"></i>
+                </div>
+
+                <h4>Calendar</h4>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <span id="enrolled">Enrolled</span>
+
+            <div class="menu-pages">
+
+                <div class="menu-titles">
+                    <i class="fa-solid fa-clipboard-check menu-icons" style="color: #696969;"></i>
+                </div>
+
+                <h4>To-do</h4>
+            </div>
+
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-pages">
+
+                <div class="menu-titles">
+                    <i class="fa-solid fa-box-archive menu-icons" style="color: #5e5e5e;"></i>
+                </div>
+
+                <h4>Archived Classes</h4>
+            </div>
+            <div class="menu-pages">
+
+                <div class="menu-titles">
+                    <i class="fa-solid fa-gear menu-icons" style="color: #5e5e5e;"></i>
+                </div>
+
+                <h4>Settings</h4>
+            </div>
+
+        </div>
+    </div>
+
     <div class="profile-page">
         <div class="profile-cont">
             <h2 class="profile-header">Profile</h2>
@@ -14,8 +106,8 @@
             <div class="profile-pic-change">
                 <div class="pic-btn-container">
                     <button class="change-btn">
-                        <img src="">
-                        <span>Change</span>
+                        <div class="change"><img class=icon src="../assets/user.png"></div>
+                        <div class="change">Change</div>
                     </button>
                 </div>
             </div>
@@ -23,5 +115,6 @@
             <div class="change-as">Change your password, edit name and email. <a class="change-link" target="_blank" href="//">Manage</a></div>
         </div>
     </div>
+    <script src="../sources/script.js"></script>
 </body>
 </html>

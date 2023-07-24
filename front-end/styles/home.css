@@ -64,6 +64,9 @@ nav {
   z-index: 1;
   border-bottom: 1px solid rgb(188, 188, 188);
   position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .class-nav {

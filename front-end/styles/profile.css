@@ -29,6 +29,7 @@ body {
   overflow: hidden;
   padding: 25px;
   margin-bottom: 2rem;
+  color: #3c4043;
 }
 
 @media (max-width: 780px) {
@@ -83,7 +84,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: rgba(39, 38, 38, 0.89);
+  background-color: rgba(35, 34, 34, 0.911);
   border-radius: 10px;
   width: 400px;
   height: 650px;

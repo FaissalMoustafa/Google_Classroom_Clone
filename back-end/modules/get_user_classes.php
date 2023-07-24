@@ -1,7 +1,8 @@
 <?php
-    include('connection.php');
-    
-    function getClasses($user_id){
+    $root = "C:\\xampp\\htdocs\\Google_Classroom_Clone\\";
+    include("$root.\\back-end\\connection.php");
+    $con = $mysqli;
+    function getClasses($mysqli, $user_id){
         $statement = "
         select u.classroom_id, c.class_title, c.teacher_id 
         from classroom_users u
@@ -12,4 +13,4 @@
         $get_user_classrooms->bind_param('s',$user_id);
         $get_user_classrooms->execute();
         $get_user_classrooms->store_result();
-    }
+    };

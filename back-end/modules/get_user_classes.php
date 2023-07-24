@@ -10,6 +10,9 @@
         where student_id = ?;
         ";
         $stmt_class_members = "
+        select users.user_id, first_name, last_name from users
+        join classroom_users as members on users.user_id = members.student_id
+        where members.classroom_id = ?;
         ";
         $get_user_classrooms = $mysqli->prepare($stmt_class_details);
         $get_user_classrooms->bind_param('s',$user_id);

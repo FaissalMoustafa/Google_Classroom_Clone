@@ -8,13 +8,22 @@
     flex-direction: column;
 }
 
-img{
+.img-header img{
     width: 100%;
     border-radius: 10px;
 }
 .img-header{
+   
     border-radius: 15px;
-    height: 240px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+.class-info{
+    margin-top: 40px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 @media (width: 780px) {
@@ -23,3 +32,32 @@ img{
       
     }
   }
+
+.announce-to-class img{
+width: 100%;
+}
+
+.column-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.stream-posts{
+    flex:1;
+    margin-left: 50px;
+}
+
+.class-code-cont{
+    display: flex;
+    justify-content: space-between;
+    border: #bababa solid 1pt;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom:20px;
+    gap: 1em;
+}
+
+.class-code{
+    display: flex;
+    flex-direction: column;
+}

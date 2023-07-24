@@ -24,9 +24,9 @@ const pic_btn=document.getElementById("change_btn")
 
 const pic_modal=document.getElementById("change-pic-modal")
 
-const pic_menu=document.getElementById("modal_content")
+const pic_menu=document.getElementById("pic_modal_content")
 
-const close_btn=document.getElementById("close_btn")
+const close_btn=document.getElementById("close_btn1")
 
 pic_btn.addEventListener("click",bringPicMenu)
 

@@ -235,17 +235,17 @@ header {
   margin-right: 0.2em;
 }
 
-.content {
+.home-content {
   margin: 2em;
 }
 
-ol {
+.home-content ol {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
 }
 
-ol li {
+.home-content ol li {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -255,11 +255,11 @@ ol li {
   border-radius: 1em;
 }
 
-ol li:hover {
+.home-content ol li:hover {
   box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.2);
 }
 
-li a {
+.home-content li a {
   text-decoration: none;
 }
 
@@ -342,7 +342,7 @@ li a {
   font-size: 1.2em;
 }
 
-li img {
+.home-content li img {
   position: relative;
   float: right;
   border-radius: 50%;
@@ -350,4 +350,51 @@ li img {
   margin-right: 0.5em;
   height: 4.6875rem;
   width: 4.6875rem;
+}
+
+.people-content {
+  margin: 3% 25%;
+  display: flex;
+  flex-flow: column;
+  gap: 3em;
+  max-width: 50%;
+}
+
+.user-profile img {
+  width: 2em;
+  height: 2em;
+}
+.user-profile {
+  padding: 0 1em 0 0;
+}
+
+.user-name {
+  letter-spacing: 0.01785714em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #3c4043;
+  padding-right: 0.5em;
+}
+
+.people-titles {
+  font-size: 2em;
+  font-weight: 400;
+  border-bottom: #3e3e3e solid 1px;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.Classmates-part .people-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.people-content ol li {
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  border-bottom: #cacaca solid 1px;
 }

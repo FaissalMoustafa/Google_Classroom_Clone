@@ -1,5 +1,7 @@
 <?php
 include 'connection.php';
+//DOCUMENT_ROOT finds the path to root folder
+// example: c:\xampp\htdocs
 $root = $_SERVER['DOCUMENT_ROOT']."\\Google_Classroom_Clone\\";
 include $root."back-end\\modules\\get-user-classes.php";
 

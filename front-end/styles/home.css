@@ -64,6 +64,9 @@ nav {
   z-index: 1;
   border-bottom: 1px solid rgb(188, 188, 188);
   position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .class-nav {
@@ -307,9 +310,16 @@ header {
   line-height: 1.75rem;
 }
 
+.due {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .due h4 {
   color: rgba(0, 0, 0, 0.549);
   font-weight: 500;
+  font-size: 0.9em;
 }
 
 .due a {
@@ -393,8 +403,221 @@ header {
 }
 
 .people-content ol li {
-  padding: 0.5em 1em;
+  padding: 0.5 em 1em;
   display: flex;
   align-items: center;
   border-bottom: #cacaca solid 1px;
+}
+
+.stream-content {
+  margin: 3% 15%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 2em;
+  position: relative;
+}
+
+.stream-header {
+  background-color: #252525;
+  border-radius: 0.7em;
+  padding: 6em 6em 2em 2em;
+  height: 100%;
+  width: 100%;
+}
+
+.header-text {
+  display: flex;
+  flex-flow: column;
+  margin-top: 5em;
+}
+
+.header-title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 2.75rem;
+  color: #fff;
+}
+
+.header-info {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: #fff;
+}
+
+.stream-body {
+  display: flex;
+}
+
+.stream-left {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  gap: 2em;
+  margin-right: 2em;
+}
+
+.meet-part {
+  display: flex;
+  flex-flow: column;
+  border: #bababa solid 1pt;
+  border-radius: 0.5em;
+  padding: 1em;
+  gap: 1em;
+}
+
+.meet-part button {
+  border: none;
+  border-radius: 0.5em;
+  color: #fff;
+  background-color: #1f1f1f;
+  font-weight: 500;
+  padding: 0.7em;
+  cursor: pointer;
+}
+
+.meet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meet-title,
+.to-do-title {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01785714em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #3c4043;
+}
+
+.menu-icon-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2em;
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  border-radius: 3em;
+  cursor: pointer;
+}
+
+.menu-icon-container:hover {
+  background-color: #dddcdc;
+}
+
+.meet-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet-icon-container img {
+  width: 1.8em;
+  height: 1.8em;
+  margin-right: 0.8em;
+}
+
+.to-do-part {
+  display: flex;
+  flex-flow: column;
+  border: #bababa solid 1pt;
+  border-radius: 0.5em;
+  padding: 1em;
+  gap: 1em;
+}
+
+.to-do-part ol {
+  display: flex;
+  flex-flow: column;
+}
+
+.to-do-part ol li {
+  display: flex;
+  flex-flow: column;
+}
+
+.to-do-part ol li a {
+  color: rgba(0, 0, 0, 0.549);
+}
+
+.to-do-part ol li a:hover {
+  color: rgba(0, 0, 0, 0.549);
+}
+
+.stream-right {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.stream-right ol {
+  display: flex;
+  flex-flow: column;
+  gap: 1.7em;
+}
+
+.stream-icon-title {
+  display: flex;
+}
+
+.stream-right ol li {
+  padding: 1.3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #bababa solid 1pt;
+  border-radius: 0.7em;
+  width: 100%;
+}
+
+.stream-right ol li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.stream-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #bababa solid 1pt;
+  background-color: #5f6368;
+  border-radius: 3em;
+  width: 2.8em;
+  height: 2.8em;
+  margin: 0 1em 0 0.5em;
+}
+
+.stream-icon-container i {
+  font-size: 1.3em;
+  color: #e7e7e7;
+}
+
+.announcement-content {
+  margin-right: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.announcement-date {
+  letter-spacing: 0.025em;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #5f6368;
+}
+
+.announcement-title {
+  letter-spacing: 0.01785714em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #3c4043;
 }

@@ -310,6 +310,7 @@ header {
 .due h4 {
   color: rgba(0, 0, 0, 0.549);
   font-weight: 500;
+  font-size: 0.9em;
 }
 
 .due a {
@@ -434,4 +435,117 @@ header {
   font-weight: 400;
   line-height: 1.75rem;
   color: #fff;
+}
+
+.stream-body {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.stream-left {
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+  margin-right: 2em;
+}
+
+.meet-part {
+  display: flex;
+  flex-flow: column;
+  border: #bababa solid 1pt;
+  border-radius: 0.5em;
+  padding: 1em;
+  gap: 1em;
+}
+
+.meet-part button {
+  border: none;
+  border-radius: 0.5em;
+  color: #fff;
+  background-color: #1f1f1f;
+  font-weight: 500;
+  padding: 0.7em;
+  cursor: pointer;
+}
+
+.meet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meet-title,
+.to-do-title {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01785714em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #3c4043;
+}
+
+.menu-icon-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2em;
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  border-radius: 3em;
+  cursor: pointer;
+}
+
+.menu-icon-container:hover {
+  background-color: #efefef;
+}
+
+.meet-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet-icon-container img {
+  width: 1.8em;
+  height: 1.8em;
+  margin-right: 0.8em;
+}
+
+.stream-right {
+  display: flex;
+  flex-flow: column;
+}
+
+.stream-right ol li {
+  display: flex;
+  justify-content: space-around;
+}
+
+.to-do-part {
+  display: flex;
+  flex-flow: column;
+  border: #bababa solid 1pt;
+  border-radius: 0.5em;
+  padding: 1em;
+  gap: 1em;
+}
+
+.to-do-part ol {
+  display: flex;
+  flex-flow: column;
+}
+
+.to-do-part ol li {
+  display: flex;
+  flex-flow: column;
+}
+
+.to-do-part ol li a {
+  color: rgba(0, 0, 0, 0.549);
+}
+
+.to-do-part ol li a:hover {
+  color: rgba(0, 0, 0, 0.549);
 }

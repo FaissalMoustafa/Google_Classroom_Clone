@@ -20,4 +20,13 @@ function createClass($mysqli, $teacher_id, $class_title, $class_description){
         values
         (?,?,?)
     ";
+
+    $create_class = $mysqli->prepare($stmt_create_class);
+    $create_class->bind_param($teacher_id, $class_title, $class_description);
+    $is_class_created = $create_class->execute();
+
+    if($is_class_created)
+        return $is_class_created;
+        
+    return false;
 }

@@ -1,7 +1,7 @@
 <?php
     $root = "C:\\xampp\\htdocs\\Google_Classroom_Clone\\";
     include("$root.\\back-end\\connection.php");
-    $con = $mysqli;
+    
     function getClasses($mysqli, $user_id){
         $stmt_class_details = "
         select u.classroom_id, c.class_title, c.teacher_id 

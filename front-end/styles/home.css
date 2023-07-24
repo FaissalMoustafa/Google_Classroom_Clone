@@ -584,7 +584,7 @@ header {
   cursor: pointer;
 }
 
-.stream-icon-container {
+.stream-icon-container{
   display: flex;
   justify-content: center;
   align-items: center;

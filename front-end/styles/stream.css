@@ -16,7 +16,7 @@
    
     border-radius: 15px;
     height: 250px;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .class-info{
@@ -60,4 +60,34 @@ width: 100%;
 .class-code{
     display: flex;
     flex-direction: column;
+}
+
+.stream-icon-title{
+    height:42px;
+    display:flex;
+    justify-content: space-between;
+    flex:1;
+}
+
+.stream-right img{
+    height:100%;
+}
+
+.stream-cont{
+    display: flex;
+}
+
+.announcement-title{
+    margin-top: 15px;
+}
+
+.stream-right li{
+    height:72px;
+    display: flex;
+    justify-content: space-between;
+    border: #bababa solid 1pt;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 20px;
+    gap: 1em;
 }

@@ -1,0 +1,25 @@
+.main-div{
+    display: flex;
+    justify-content: center;
+}
+
+.content-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+.img-header{
+    border-radius: 15px;
+    height: 240px;
+}
+
+@media (width: 780px) {
+    .img-header {
+      margin: 0 -1.5rem;
+      
+    }
+  }

@@ -106,8 +106,10 @@ pages.page_login = async (data) => {
     if (response.status === "logged in") {
         localStorage.setItem("user",JSON.stringify(response))
         console.log(response.status)
+
         if(response.role === 0){
             localStorage.setItem('myData', JSON.stringify(response));
+
             setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
         }else{
             setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)

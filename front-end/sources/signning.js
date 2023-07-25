@@ -38,7 +38,7 @@ pages.submit = (page) => {
 
         const password = document.getElementById("password")
         const check_password = document.getElementById("check-password")
-
+        
         // Remove any existing error message
         const existingError = document.getElementById("error-message");
         if (existingError) {
@@ -69,7 +69,7 @@ pages.page_register = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        window.location.href = `../templates/log_in.html`;
+        setTimeout(() => {window.location.href = `../templates/log_in.html`;}, 1000)
     }else{
         console.log(response.message)
     }
@@ -82,7 +82,7 @@ pages.page_change_pass = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        window.location.href = `../templates/log_in.html`;
+        setTimeout(() => {window.location.href = `../templates/log_in.html`;}, 1000)
     }else{
         console.log(response.message)
     }

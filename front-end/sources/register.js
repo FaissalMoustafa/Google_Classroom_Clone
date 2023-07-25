@@ -102,6 +102,7 @@ pages.page_login = async (data) => {
     const login_url = pages.base_url + "login.php"
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
+    localStorage.removeItem('myData')
     if (response.status === "logged in") {
         localStorage.setItem("user",JSON.stringify(response))
         console.log(response.status)

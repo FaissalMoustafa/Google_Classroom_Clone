@@ -100,20 +100,22 @@ pages.page_change_pass = async (data) => {
 pages.page_login = async (data) => {
     console.log("i am in login")
     const login_url = pages.base_url + "login.php"
-    console.log(login_url);
-    console.log(data);
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         console.log(response.status)
-        window.location.href = `./home.html`;
+        if(response.role === "student"){
+            setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
+        }else{
+            setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)
+        }
+        
     }else{
         console.log(response.message)
         if(response.message ==="Email not found"){
             const errorDiv = document.createElement("div");
             errorDiv.innerText = "Email doesn't exist";
             errorDiv.id = "error-password";
-            // errorDiv.id = "error-message";
             forgot_div.appendChild(errorDiv);
         }else{
             const errorDiv = document.createElement("a");

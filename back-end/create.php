@@ -13,6 +13,14 @@ $class_description = $_POST['class_description'];
 
 $status = createClass($mysqli, $teacher_id, $class_title, $class_description);
 
-$response['status'] = $status;
+if($status){
+    $response['status'] = "created";
+    header('Content-Type: application/json'); 
+    echo json_encode($response);
+}
+else{
+$response['status'] = "failed";
 
+header('Content-Type: application/json'); 
 echo json_encode($response);
+}

@@ -10,3 +10,9 @@ $_POST = json_decode($json_data, true);
 $teacher_id = $_POST['teacher_id'];
 $class_title = $_POST['class_title'];
 $teacher_id = $_POST['class_description'];
+
+$status = createClass($mysqli, $teacher_id, $class_title, $class_description);
+
+$response['status'] = $status;
+
+echo json_encode($response);

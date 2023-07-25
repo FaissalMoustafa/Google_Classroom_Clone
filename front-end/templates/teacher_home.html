@@ -27,7 +27,6 @@
         <div class="nav-right">
             <div class="icon" id="plus">
                 <a href="#">
-
                     <i class="fa-solid fa-plus " title="create a class" style="color: #4f4f4f;"></i>
                 </a>
             </div>
@@ -43,9 +42,8 @@
 
     <div id="side-menu">
         <div class="menu-section">
-            <a href="./home.html">
+            <a href="./teacher_home.html">
                 <div class="menu-pages">
-
                     <div class="menu-titles">
                         <i class="fa-solid fa-house menu-icons" style="color: #6b6b6b;"></i>
                     </div>
@@ -106,7 +104,7 @@
 
         <ol>
             <li>
-                <a href="./student_stream.html">
+                <a href="./teacher_stream.html">
 
                     <div class="card-head">
                         <div class="text">
@@ -150,19 +148,22 @@
         <div id="create_class_content" class="create-class-content">
             <h3 class="header-class">Create Class</h3>
             <div class="new-class-info">
-                <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
-                <input type="text" id="class_section" class="input-field" placeholder="Section">
-                <input type="password" id="subject" class="input-field" placeholder="Subject">
-                <input type="password" id="conf_pass" class="input-field" placeholder="Room">
-                <div class="btn-container">
-                    <button id="cancel_btn" class="cancel-btn">Cancel</button>
-                    <button id="create_btn" class="create-btn">Create</button>
-                </div>
+                <form id="new-class-info-form">
+                    <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
+                    <input type="text" id="class_section" class="input-field" placeholder="Section">
+                    <input type="password" id="subject" class="input-field" placeholder="Subject">
+                    <input type="password" id="conf_pass" class="input-field" placeholder="Room">
+                    <div class="btn-container">
+                        <button id="cancel_btn" class="cancel-btn">Cancel</button>
+                        <button id="create_btn" class="create-btn">Create</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <script src="../sources/teacher.js"></script>
     <script src="../sources/script.js"></script>
+    <script src="../sources/class.js"></script>
 </body>
 
 </html>

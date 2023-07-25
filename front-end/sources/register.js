@@ -16,7 +16,6 @@ pages.postAPI = async (api_url, api_data) => {
             body: JSON.stringify(api_data)
         })
         .then(res =>{
-            console.log(res)
             return res.json()
         } )
         .then(api_data => {
@@ -42,9 +41,15 @@ pages.submit = (page) => {
         const check_password = document.getElementById("check-password")
         
         // Remove any existing error message
+        const forgot_div = document.getElementById("forgot")
         const existingError = document.getElementById("error-message");
         if (existingError) {
             form.removeChild(existingError);
+        }
+        // Remove any existing error message
+        const passwordError = document.getElementById("error-password");
+        if (passwordError) {
+            forgot_div.removeChild(passwordError);
         }
 
         //validating the password
@@ -71,8 +76,8 @@ pages.page_signup = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        //setTimeout(() => {}, 1000)
-        window.location.href = 'templates/log_in.html';
+        setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
+        
     }else{
         console.log(response.message)
     }
@@ -103,12 +108,20 @@ pages.page_login = async (data) => {
         console.log(response.status)
         window.location.href = `./home.html`;
     }else{
-        const errorDiv = document.createElement("a");
-        errorDiv.innerText = "Forgot your Password?";
-        errorDiv.id = "error-message";
-        errorDiv.href = "./forgot_pass.html";
-        forgot_div.appendChild(errorDiv);
         console.log(response.message)
+        if(response.message ==="Email not found"){
+            const errorDiv = document.createElement("div");
+            errorDiv.innerText = "Email doesn't exist";
+            errorDiv.id = "error-password";
+            // errorDiv.id = "error-message";
+            forgot_div.appendChild(errorDiv);
+        }else{
+            const errorDiv = document.createElement("a");
+            errorDiv.innerText = "Forgot your Password?";
+            errorDiv.id = "error-password";
+            errorDiv.href = "./forgot_pass.html";
+            forgot_div.appendChild(errorDiv);
+        }
     }
 }
 

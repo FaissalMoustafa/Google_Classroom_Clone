@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/838322d488.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/teacher.css">
     <link rel="icon" href="../assets/Google_Classroom_icon.png">
     <title>Classes</title>
 </head>
@@ -23,9 +24,9 @@
             </div>
         </div>
         <div class="nav-right">
-            <div class="icon">
+            <div class="icon" id="plus">
                 <a href="#">
-                    <i class="fa-solid fa-plus " title="create a class" id="plus" style="color: #4f4f4f;"></i>
+                    <i class="fa-solid fa-plus " title="create a class"  style="color: #4f4f4f;"></i>
                 </a>
             </div>
             <div class="icon">
@@ -143,8 +144,22 @@
 
         </ol>
     </div>
-
-    <script src="../sources/script.js"></script>
+    <div id="create_class_modal" class="create-class-modal">
+        <div id="create_class_content" class="create-class-content">
+            <h3 class="header-class">Create Class</h3>
+            <div class="new-class-info">
+                <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
+                <input type="text" id="class_section" class="input-field" placeholder="Section">
+                <input type="password" id="subject" class="input-field" placeholder="Subject">
+                <input type="password" id="conf_pass" class="input-field" placeholder="Room">
+                <div class="btn-container">
+                    <button id="cancel_btn" class="cancel-btn">Cancel</button>
+                    <button id="create_btn" class="create-btn">Create</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script src="../sources/teacher.js"></script>
 </body>
 
 </html>

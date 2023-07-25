@@ -70,3 +70,4 @@ function closePicMenu2(event2) {
         edit_modal.style.display = 'none';
     }
 }
+

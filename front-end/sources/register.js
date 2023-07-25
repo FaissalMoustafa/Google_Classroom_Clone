@@ -16,7 +16,6 @@ pages.postAPI = async (api_url, api_data) => {
             body: JSON.stringify(api_data)
         })
         .then(res =>{
-            console.log(res)
             return res.json()
         } )
         .then(api_data => {
@@ -42,9 +41,15 @@ pages.submit = (page) => {
         const check_password = document.getElementById("check-password")
         
         // Remove any existing error message
+        const forgot_div = document.getElementById("forgot")
         const existingError = document.getElementById("error-message");
         if (existingError) {
             form.removeChild(existingError);
+        }
+        // Remove any existing error message
+        const passwordError = document.getElementById("error-password");
+        if (passwordError) {
+            forgot_div.removeChild(passwordError);
         }
 
         //validating the password
@@ -71,8 +76,8 @@ pages.page_signup = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        //setTimeout(() => {}, 1000)
-        window.location.href = 'templates/log_in.html';
+        setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
+        
     }else{
         console.log(response.message)
     }
@@ -95,21 +100,32 @@ pages.page_change_pass = async (data) => {
 pages.page_login = async (data) => {
     console.log("i am in login")
     const login_url = pages.base_url + "login.php"
-    console.log(login_url);
-    console.log(data);
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         localStorage.setItem("user",JSON.stringify(response))
         console.log(response.status)
-        window.location.href = `./home.html`;
+        if(response.role === 0){
+            localStorage.setItem('myData', JSON.stringify(response));
+            // setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
+        }else{
+            // setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)
+        }
+        
     }else{
-        const errorDiv = document.createElement("a");
-        errorDiv.innerText = "Forgot your Password?";
-        errorDiv.id = "error-message";
-        errorDiv.href = "./forgot_pass.html";
-        forgot_div.appendChild(errorDiv);
         console.log(response.message)
+        if(response.message ==="Email not found"){
+            const errorDiv = document.createElement("div");
+            errorDiv.innerText = "Email doesn't exist";
+            errorDiv.id = "error-password";
+            forgot_div.appendChild(errorDiv);
+        }else{
+            const errorDiv = document.createElement("a");
+            errorDiv.innerText = "Forgot your Password?";
+            errorDiv.id = "error-password";
+            errorDiv.href = "./forgot_pass.html";
+            forgot_div.appendChild(errorDiv);
+        }
     }
 }
 

@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/profile.css">
-    <link rel="stylesheet" href="../styles/home.css">
     <script src="https://kit.fontawesome.com/838322d488.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/teacher.css">
     <link rel="icon" href="../assets/Google_Classroom_icon.png">
-    <title>Classroom Settings</title>
+    <title>Classes</title>
 </head>
 
 <body>
+
     <nav>
         <div class="nav-left">
             <div class="icon">
@@ -19,15 +20,11 @@
             </div>
             <div class="google-logo">
                 <img src="../assets/googlelogo.svg" alt="google logo">
+
                 <span class="nav-title">Classroom</span>
             </div>
         </div>
         <div class="nav-right">
-            <div class="icon">
-                <a href="#">
-                    <i class="fa-solid fa-plus " title="create a class" id="plus" style="color: #4f4f4f;"></i>
-                </a>
-            </div>
             <div class="icon">
                 <img id="dots" title="google apps" src="../assets/dots-menu.png" alt="dots-menu">
             </div>
@@ -83,63 +80,83 @@
         </div>
     </div>
 
-    <div class="profile-page">
-        <div class="profile-cont">
-            <h2 class="profile-header">Profile</h2>
-            <h3 class="profile-pic">Profile picture</h3>
-            <div class="profile-pic-change">
-                <div class="pic-btn-container">
-                    <button id="change_btn" class="change-btn">
-                        <div class="change"><img class=icon src="../assets/user.png"></div>
-                        <div class="change">Change</div>
-                    </button>
+    <header>
+        <div class="header-titles">
+            <div class="header-icon-container">
+                <i class="fa-solid fa-clipboard-check header-icons"></i>
+            </div>
+            <h4>To-do</h4>
+        </div>
+        <div class="header-titles">
+            <div class="header-icon-container">
+                <i class="fa-regular fa-calendar header-icons"></i>
+            </div>
+            <h4>Calendar</h4>
+        </div>
+    </header>
+
+    <div class="home-content">
+
+        <ol>
+            <li>
+                <a href="./student_stream.html">
+
+                    <div class="card-head">
+                        <div class="text">
+
+                            <div class="card-title">
+                                <h2>Class Title </h2>
+                                <span> class info</span>
+                            </div>
+                            <span class="card-title">department</span>
+                        </div>
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-ellipsis-vertical card-menu-icon" style="color: #ffffff;"></i>
+                        </div>
+
+                    </div>
+                </a>
+
+                <div class="card-body">
+                    <div class="due">
+                        <h4>Due Wednesday</h4>
+                        <a href="#">10:00 AM - Google_Classroom... </a>
+                    </div>
+                    <img src="../assets/user.png" alt="user pic">
                 </div>
-            </div>
-            <h3 class="edit-profile">Edit Profile Information</h3>
-            <div class="change-as">
-                <span>Change your password, or edit names</span>
-                <button id="manage_btn" class="mng-btn">
-                    Manage Info &#9998;
-                </button>
-            </div>
-        </div>
+                <div class="card-footer">
+
+                    <div class="card-icon-container">
+                        <i class="fa-regular fa-id-badge card-footer-icon" style="color: #383838;"></i>
+                    </div>
+
+                    <div class="card-icon-container">
+                        <i class="fa-regular fa-folder-closed card-footer-icon" style="color: #242424;"></i>
+                    </div>
+
+                </div>
+            </li>
+
+        </ol>
     </div>
-    <div id="change-pic-modal" class="acnt-mng">
-        <div id="pic_modal_content" class="modal-content">
-            <span id="close_btn1" class="close-btn">&times;</span>
-            <h2 class="pic-header">Profile picture</h2>
-            <div class="pic-imp">A picture helps people recognize you and lets you know when you are signed in to your
-                account</div>
-            <br>
-            <div id="profile-pic-modal" class="profile-pic-modal">
-                <img src="../assets/user.png">
-            </div>
-            <div class="btn-container">
-                <button id="change-pic" class="pic-btn">&#9998; Change</button>
-                <button id="remove-pic" class="pic-btn">&#128465 Remove</button>
-            </div>
-        </div>
-    </div>
-    <div id="edit-info-modal" class="acnt-mng">
-        <div id="info_modal_content" class="modal-content">
-            <span id="close_btn2" class="close-btn">&times;</span>
-            <div class="info-edit">
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" class="input-field" placeholder="Enter first name">
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" class="input-field" placeholder="Enter last name">
-                <label for="new_pass">Password:</label>
-                <input type="password" id="new_pass" class="input-field" placeholder="Enter new password">
-                <label for="conf_pass">Confirm Password:</label>
-                <input type="password" id="conf_pass" class="input-field" placeholder="Confirm password">
+    <div id="create_class_modal" class="create-class-modal">
+        <div id="create_class_content" class="create-class-content">
+            <h3 class="header-class">Create Class</h3>
+            <div class="new-class-info">
+                <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
+                <input type="text" id="class_section" class="input-field" placeholder="Section">
+                <input type="password" id="subject" class="input-field" placeholder="Subject">
+                <input type="password" id="conf_pass" class="input-field" placeholder="Room">
                 <div class="btn-container">
-                    <button id="sub_change" class="submit-btn">Submit Changes</button>
+                    <button id="cancel_btn" class="cancel-btn">Cancel</button>
+                    <button id="create_btn" class="create-btn">Create</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="../sources/script.js"></script>
-    <script src="../sources/edit_profile.js"></script>
+    <script src="../sources/display_class.js"></script>
+
 </body>
 
 </html>

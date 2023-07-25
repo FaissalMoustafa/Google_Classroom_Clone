@@ -14,12 +14,32 @@ include $root."back-end\\connection.php";
 /*
     TO BE IMPLEMENTED:
     >> check if class already exists
-    >> check if user is already a member in this class
+    >> check if user is already a member in this class ==> done
         >>if not: add user
         >>else: return user already exists
     >>return true if joined successfully; false if not.
 
 */
+
+function classExists($mysqli, $class_id){
+    $stmt_check_if_class_exists = "
+        select * from classrooms
+        where classroom_id = ?
+    ";
+
+    $check_if_class_exists = $mysqli->prepare($stmt_check_if_class_exists);
+    $check_if_class_exists->bind_param('ss',$class_id);
+    $check_if_class_exists->execute();
+    $check_if_class_exists->store_result();
+
+    if($check_if_class_exists->num_rows() > 0){
+        return true;
+    }
+    return false;
+    
+    
+
+}
 
 function isMember($mysqli, $class_id, $student_id){
     $stmt_check_if_member = "

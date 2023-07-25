@@ -95,15 +95,29 @@
         </div>
     </header>
 
-    <div class="home-content">
+    <div id="create_class_modal" class="create-class-modal">
+        <div id="create_class_content" class="create-class-content">
+            <h3 class="header-class">Create Class</h3>
+            <div class="new-class-info">
+                <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
+                <input type="text" id="class_section" class="input-field" placeholder="Section">
+                <input type="password" id="subject" class="input-field" placeholder="Subject">
+                <input type="password" id="conf_pass" class="input-field" placeholder="Room">
+                <div class="btn-container">
+                    <button id="cancel_btn" class="cancel-btn">Cancel</button>
+                    <button id="create_btn" class="create-btn">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <ol>
+    <div class="home-content">
+        <ol id="cardList">
             <li>
                 <a href="./student_stream.html">
 
                     <div class="card-head">
                         <div class="text">
-
                             <div class="card-title">
                                 <h2>Class Title </h2>
                                 <span> class info</span>
@@ -113,8 +127,8 @@
                         <div class="card-icon-container">
                             <i class="fa-solid fa-ellipsis-vertical card-menu-icon" style="color: #ffffff;"></i>
                         </div>
-
                     </div>
+
                 </a>
 
                 <div class="card-body">
@@ -139,21 +153,7 @@
 
         </ol>
     </div>
-    <div id="create_class_modal" class="create-class-modal">
-        <div id="create_class_content" class="create-class-content">
-            <h3 class="header-class">Create Class</h3>
-            <div class="new-class-info">
-                <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
-                <input type="text" id="class_section" class="input-field" placeholder="Section">
-                <input type="password" id="subject" class="input-field" placeholder="Subject">
-                <input type="password" id="conf_pass" class="input-field" placeholder="Room">
-                <div class="btn-container">
-                    <button id="cancel_btn" class="cancel-btn">Cancel</button>
-                    <button id="create_btn" class="create-btn">Create</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <script src="../sources/script.js"></script>
     <script src="../sources/display_class.js"></script>
 

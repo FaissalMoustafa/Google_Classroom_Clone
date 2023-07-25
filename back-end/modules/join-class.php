@@ -42,20 +42,23 @@ function classExists($mysqli, $class_id){
 }
 
 function isMember($mysqli, $class_id, $student_id){
-    $stmt_check_if_member = "
-        select * from classroom_users
-        where classroom_id = ?
-        and student_id = ?
+    if(classExists($mysqli, $class_id)){
+        $stmt_check_if_member = "
+            select * from classroom_users
+            where classroom_id = ?
+            and student_id = ?
 
-    ";
+        ";
 
-    $check_if_member = $mysqli->prepare($stmt_check_if_member);
-    $check_if_member->bind_param('ss',$class_id, $student_id);
-    $check_if_member->execute();
-    $check_if_member->store_result();
+        $check_if_member = $mysqli->prepare($stmt_check_if_member);
+        $check_if_member->bind_param('ss',$class_id, $student_id);
+        $check_if_member->execute();
+        $check_if_member->store_result();
 
-    if($check_if_member->num_rows() > 0){
-        return true;
+        if($check_if_member->num_rows() > 0){
+            return true;
+        }
+        return false;
     }
     return false;
 }

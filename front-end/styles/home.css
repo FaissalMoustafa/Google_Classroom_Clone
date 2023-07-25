@@ -672,7 +672,7 @@ header {
 }
 
 .create-class-modal{
-  display: flex;
+  display: none;
   /* flex */
   justify-content: center;
   align-content: center;

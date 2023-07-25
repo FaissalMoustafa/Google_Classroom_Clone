@@ -71,5 +71,3 @@ function closePicMenu2(event2) {
     }
 }
 
-
-const plus_click=document.getElementById("plus")

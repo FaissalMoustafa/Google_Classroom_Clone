@@ -73,6 +73,19 @@ pages.page_register = async (data) => {
     }else{
         console.log(response.message)
     }
+}
+
+pages.page_change_pass = async (data) => {
+    console.log("i am in change_pass")
+    const change_pass_url = pages.base_url + "change_pass.php"
+    const response = await pages.postAPI(change_pass_url,data)
+    
+    if (response.status === "success") {
+        console.log(response.message)
+        window.location.href = `../templates/log_in.html`;
+    }else{
+        console.log(response.message)
+    }
     
 }
 

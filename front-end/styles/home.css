@@ -672,7 +672,6 @@ header {
 .assignment-title {
   display: flex;
   justify-content: space-between;
-<<<<<<< HEAD
 }
 
 .menu-icon-container {
@@ -741,6 +740,3 @@ header {
   display: flex;
   align-items: center;
 }
-=======
-}
->>>>>>> 797eef3fc0f563222cc032c9bc98a2300938f3f9

@@ -714,6 +714,7 @@ header {
   gap: 1.5em;
   flex-flow: column;
   border: solid 1px black;
+  border-radius: 0.7em;
   margin: 0 0 2em 2em;
   padding: 2em;
 }
@@ -729,6 +730,7 @@ header {
   padding: 2em;
   margin: 0 0 2em 2em;
   border: solid 1px black;
+  border-radius: 0.7em;
   display: flex;
   flex-flow: column;
 }

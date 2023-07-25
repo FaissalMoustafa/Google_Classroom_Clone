@@ -76,7 +76,7 @@ pages.page_signup = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        // setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
+        setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
         
     }else{
         console.log(response.message)

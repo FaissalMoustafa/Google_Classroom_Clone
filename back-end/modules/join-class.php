@@ -12,12 +12,12 @@ include $root."back-end\\connection.php";
 */
 
 /*
-    TO BE IMPLEMENTED:
-    >> check if class already exists
-    >> check if user is already a member in this class ==> done
-        >>if not: add user
-        >>else: return user already exists
-    >>return true if joined successfully; false if not.
+    TO BE IMPLEMENTED:                                      ==> all done
+    >> check if class already exists                        ==> done
+    >> check if user is already a member in this class      ==> done
+        >>if not: add user                                  ==> done
+        >>else: return user already exists                  ==> done
+    >>return true if joined successfully; false if not.     ==> done
 
 */
 
@@ -64,5 +64,20 @@ function isMember($mysqli, $class_id, $student_id){
 }
 
 function joinClass($mysqli, $class_id, $student_id){
+    if(!isMember($mysqli, $class_id, $student_id)){
+        $stmt_add_student_to_class="
+            insert into classroom_users
+            (Student_id ,classroom_id)
+            values
+            (?, ?)
+        ";
+        $add_student_to_class = $mysqli->prepare($stmt_add_student_to_class);
+        $add_student_to_class->bind_param('ss', $student_id, $class_id);
+        $status = $add_student_to_class->execute();
+
+        return $status;
+    }
+
+    return false;
 
 }

@@ -76,7 +76,7 @@ pages.page_signup = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
+        // setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
         
     }else{
         console.log(response.message)
@@ -104,10 +104,10 @@ pages.page_login = async (data) => {
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         console.log(response.status)
-        if(response.type === 0){
-            setTimeout(() => {window.location.href = `./home.html`;}, 3000)
+        if(response.role === "student"){
+            setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
         }else{
-            setTimeout(() => {window.location.href = `./home.html`;}, 3000)
+            setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)
         }
         
     }else{

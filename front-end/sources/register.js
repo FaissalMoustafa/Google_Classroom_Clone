@@ -104,10 +104,11 @@ pages.page_login = async (data) => {
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         console.log(response.status)
-        if(response.role === "student"){
-            setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
+        if(response.role === 0){
+            localStorage.setItem('myData', JSON.stringify(response));
+            // setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
         }else{
-            setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)
+            // setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)
         }
         
     }else{

@@ -1,10 +1,4 @@
 // retrieving user data from the local storage
-const user_data = localStorage.getItem("myData");
-
-
-const parsedData = JSON.parse(user_data);
-const class_ = parsedData.classes
-
 
 const displayClass = function (dataArray) {
   const cardList = document.getElementById('cardList');
@@ -89,4 +83,17 @@ const displayClass = function (dataArray) {
   });
 }
 
-displayClass(class_)
+const user_data = localStorage.getItem("myData");
+
+
+
+
+if (user_data !== null) {
+  console.log('Item exists in local storage!');
+  const parsedData = JSON.parse(user_data);
+  const class_ = parsedData.classes
+  displayClass(class_)
+} else {
+  console.log('Item does not exist in local storage.');
+}
+

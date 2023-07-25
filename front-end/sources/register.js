@@ -103,6 +103,8 @@ pages.page_login = async (data) => {
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
+        window.localStorage.setItem("uid", response.user_id); //uid stored upon successful login
+        console.log(window.localStorage.getItem("uid"));
         console.log(response.status)
         if(response.role === "0"){
             setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)

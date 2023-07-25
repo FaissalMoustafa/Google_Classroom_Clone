@@ -100,6 +100,7 @@ pages.page_login = async (data) => {
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
+        localStorage.setItem("user",JSON.stringify(response))
         console.log(response.status)
         window.location.href = `./home.html`;
     }else{

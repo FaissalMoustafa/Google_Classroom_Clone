@@ -103,8 +103,12 @@ pages.page_login = async (data) => {
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
+        localStorage.setItem("user",JSON.stringify(response))
         console.log(response.status)
-        if(response.role === "0"){
+
+        if(response.role === 0){
+            localStorage.setItem('myData', JSON.stringify(response));
+
             setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
         }else{
             setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)

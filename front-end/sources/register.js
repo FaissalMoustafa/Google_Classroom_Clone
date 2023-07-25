@@ -104,7 +104,7 @@ pages.page_login = async (data) => {
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         console.log(response.status)
-        if(response.role === "student"){
+        if(response.role === "0"){
             setTimeout(() => {window.location.href = `./student_home.html`;}, 3000)
         }else{
             setTimeout(() => {window.location.href = `./teacher_home.html`;}, 3000)

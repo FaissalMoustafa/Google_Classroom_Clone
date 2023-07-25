@@ -584,7 +584,7 @@ header {
   cursor: pointer;
 }
 
-.stream-icon-container{
+.stream-icon-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -627,13 +627,15 @@ header {
 }
 
 .assignment-container {
-  margin: 3em;
+  margin: 2em;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .assignment-left {
   display: flex;
+  width: 50%;
 }
 
 .assignment-icon {
@@ -652,6 +654,7 @@ header {
 .assignment-body {
   display: flex;
   flex-flow: column;
+  width: 100%;
   /* align-items: center; */
 }
 
@@ -669,4 +672,68 @@ header {
 .assignment-title {
   display: flex;
   justify-content: space-between;
+}
+
+.menu-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.assignment-due-points {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignment-content {
+  padding: 1em;
+  margin: 1em 0;
+  border-bottom: #b9b9b9 solid 1px;
+}
+
+.assignment-footer {
+  display: flex;
+  flex-flow: column;
+}
+
+.class-comments {
+  gap: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.assignment-right {
+  display: flex;
+  flex-flow: column;
+}
+
+.submit-part {
+  display: flex;
+  gap: 1.5em;
+  flex-flow: column;
+  border: solid 1px black;
+  margin: 0 0 2em 2em;
+  padding: 2em;
+}
+
+.submit-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-part {
+  gap: 1.5em;
+  padding: 2em;
+  margin: 0 0 2em 2em;
+  border: solid 1px black;
+  display: flex;
+  flex-flow: column;
+}
+
+.users-icon {
+  gap: 1.5em;
+  display: flex;
+  align-items: center;
 }

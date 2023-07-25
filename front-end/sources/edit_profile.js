@@ -1,3 +1,43 @@
+const pages = {}
+
+pages.base_url = "http://localhost//Google_Classroom_Clone/back-end/";
+
+pages.print_message = (message) =>{
+    console.log(message);
+}
+
+pages.postAPI = async (api_url, api_data) => {
+    try{
+        return await fetch(api_url,{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(api_data)
+        })
+        .then(res =>{
+            return res.json()
+        } )
+        .then(api_data => {
+            console.log(api_data)
+            return api_data
+        })
+    
+    }catch(error){
+        pages.print_message("Error from Linking (POST) " + error)
+    }
+}
+
+// pages.submit = (page) => {
+//     console.log("submit")
+//     const form = document.getElementById("sub_change")
+
+//     form.addEventListener('submit', event => {
+
+//         console.log("i am in submit")
+//         event.preventDefault()
+
+
 const pic_btn=document.getElementById("change_btn")
 
 const pic_modal=document.getElementById("change-pic-modal")

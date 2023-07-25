@@ -1,6 +1,6 @@
 const pages = {}
 
-pages.base_url = "http://localhost//Google_Classroom_Clone/front-end/";
+pages.base_url = "http://localhost//Google_Classroom_Clone/back-end/";
 
 pages.print_message = (message) =>{
     console.log(message);
@@ -16,9 +16,11 @@ pages.postAPI = async (api_url, api_data) => {
             body: JSON.stringify(api_data)
         })
         .then(res =>{
+            console.log(res)
             return res.json()
         } )
         .then(api_data => {
+            console.log(api_data)
             return api_data
         })
     
@@ -62,14 +64,15 @@ pages.submit = (page) => {
     })
 }
 
-pages.page_register = async (data) => {
+pages.page_signup = async (data) => {
     console.log("i am in register")
     const signup_url = pages.base_url + "signup.php"
     const response = await pages.postAPI(signup_url,data)
     
     if (response.status === "success") {
         console.log(response.message)
-        setTimeout(() => {window.location.href = `../templates/log_in.html`;}, 1000)
+        //setTimeout(() => {}, 1000)
+        window.location.href = 'templates/log_in.html';
     }else{
         console.log(response.message)
     }
@@ -82,7 +85,7 @@ pages.page_change_pass = async (data) => {
     
     if (response.status === "success") {
         console.log(response.message)
-        setTimeout(() => {window.location.href = `../templates/log_in.html`;}, 1000)
+        setTimeout(() => {window.location.href = `./log_in.html`;}, 1000)
     }else{
         console.log(response.message)
     }
@@ -92,16 +95,18 @@ pages.page_change_pass = async (data) => {
 pages.page_login = async (data) => {
     console.log("i am in login")
     const login_url = pages.base_url + "login.php"
+    console.log(login_url);
+    console.log(data);
     const response = await pages.postAPI(login_url,data)
     const forgot_div = document.getElementById("forgot")
     if (response.status === "logged in") {
         console.log(response.status)
-        // window.location.href = `dashboard.html?username=${response.username}`;
+        window.location.href = `./home.html`;
     }else{
         const errorDiv = document.createElement("a");
         errorDiv.innerText = "Forgot your Password?";
         errorDiv.id = "error-message";
-        errorDiv.href = "../templates/forgot_pass.html";
+        errorDiv.href = "./forgot_pass.html";
         forgot_div.appendChild(errorDiv);
         console.log(response.message)
     }

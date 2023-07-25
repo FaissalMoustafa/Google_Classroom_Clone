@@ -4,7 +4,7 @@
 
     function getClasses($mysqli, $user_id){
         $stmt_class_details = "
-        select u.classroom_id, c.class_title, c.teacher_id, c.classroom_description 
+        select u.classroom_id, c.class_title, c.teacher_id, c.class_description 
         from classroom_users as u
         join classrooms as c on u.classroom_id = c.classroom_id
         where student_id = ?;
@@ -33,5 +33,5 @@
             return [];
         }
 
-    };
+    }
 ?>

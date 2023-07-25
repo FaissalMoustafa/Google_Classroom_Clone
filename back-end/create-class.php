@@ -7,3 +7,6 @@ include $root."back-end\\modules\\create-class.php";
 $json_data = file_get_contents('php://input');
 $_POST = json_decode($json_data, true);
 
+$teacher_id = $_POST['teacher_id'];
+$class_title = $_POST['class_title'];
+$teacher_id = $_POST['class_description'];

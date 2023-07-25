@@ -70,3 +70,6 @@ function closePicMenu2(event2) {
         edit_modal.style.display = 'none';
     }
 }
+
+
+const plus_click=document.getElementById("plus")

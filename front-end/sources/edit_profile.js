@@ -29,7 +29,7 @@
 // }
 
 
-const form = document.getElementById("sub_change")
+const profile_details = document.getElementById("sub_change")
 
 profile_details.addEventListener('submit', (e)=>{
     e.preventDefault()

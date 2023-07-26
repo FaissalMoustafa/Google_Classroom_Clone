@@ -104,6 +104,8 @@ pages.page_login = async (data) => {
     const forgot_div = document.getElementById("forgot")
     localStorage.removeItem('myData')
     if (response.status === "logged in") {
+        window.localStorage.setItem("uid", response.user_id); //uid stored upon successful login
+        console.log(window.localStorage.getItem("uid"));
         localStorage.setItem("user",JSON.stringify(response))
         console.log(response.status)
         localStorage.setItem('myData', JSON.stringify(response));

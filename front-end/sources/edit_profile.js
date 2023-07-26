@@ -28,14 +28,33 @@ pages.postAPI = async (api_url, api_data) => {
     }
 }
 
-// pages.submit = (page) => {
+// pages.edit_prof = (page) => {
 //     console.log("submit")
 //     const form = document.getElementById("sub_change")
 
 //     form.addEventListener('submit', event => {
 
-//         console.log("i am in submit")
+//         console.log("I am in submit")
 //         event.preventDefault()
+//         const first_name = document.getElementById("first_name")
+//         const last_name = document.getElementById("last_name")
+//         const new_pass = document.getElementById("new_pass")
+//         const conf_pass = document.getElementById("conf_pass")
+//         const user_id=window.localStorage.getItem("uid")
+        
+//         const edit_prof_url = pages.base_url + "edit-profile.php"
+//         const response = await pages.postAPI(edit_prof_url,data)
+        
+//         if (response.status === "success") {
+//             console.log(response.message)
+//             setTimeout(() => {window.location.href = 'templates/log_in.html';}, 1000)
+            
+//         }else{
+//             console.log(response.message)
+//         }
+//     }
+//     )
+// }
 
 
 const pic_btn=document.getElementById("change_btn")

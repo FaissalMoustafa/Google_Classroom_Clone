@@ -86,12 +86,15 @@ const displayClass = function (dataArray) {
 }
 
 const user_data = localStorage.getItem("myData");
+
 const parsedData = JSON.parse(user_data);
+
 
 if (user_data !== null) {
   console.log('Item exists in local storage!');
   const parsedData = JSON.parse(user_data);
   const class_ = parsedData.classes
+
   console.log(parsedData)
   displayClass(class_)
 } else {

@@ -73,7 +73,6 @@
                 </div>
                 <h4>Archived Classes</h4>
             </div>
-
             <a href="./profile_edit.html">
                 <div class="menu-pages">
                     <div class="menu-titles">
@@ -99,11 +98,26 @@
             <h4>Calendar</h4>
         </div>
     </header>
-
+<!-- 
+    <div id="create_class_modal" class="create-class-modal">
+        <div id="create_class_content" class="create-class-content">
+            <h3 class="header-class">Create Class</h3>
+            <div class="new-class-info">
+                <input type="text" id="class_name" class="input-field" placeholder="Class name (required)">
+                <input type="text" id="class_section" class="input-field" placeholder="Section">
+                <input type="password" id="subject" class="input-field" placeholder="Subject">
+                <input type="password" id="conf_pass" class="input-field" placeholder="Room">
+                <div class="btn-container">
+                    <button id="cancel_btn" class="cancel-btn">Cancel</button>
+                    <button id="create_btn" class="create-btn">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->
     <div class="home-content">
-
-        <ol>
-            <li>
+        <ol id="cardList">
+            <!-- <li>
                 <a href="./teacher_stream.html">
 
                     <div class="card-head">
@@ -140,7 +154,7 @@
                     </div>
 
                 </div>
-            </li>
+            </li> -->
 
         </ol>
     </div>
@@ -161,10 +175,10 @@
             </div>
         </div>
     </div>
+    <script src="../sources/create_class.js"></script>
     <script src="../sources/teacher.js"></script>
     <script src="../sources/script.js"></script>
-    <script src="../sources/class.js"></script>
-    <script src="../sources/create_class.js"></script>
+    <script src="../sources/display_class.js"></script>
 </body>
 
 </html>

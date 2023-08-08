@@ -11,6 +11,8 @@ function createClass($mysqli, $teacher_id, $class_title, $class_description){
         (teacher_id, class_title, class_description)
         values
         (?,?,?)
+
+        update teacher_id 
     ";
 
     $create_class = $mysqli->prepare($stmt_create_class);

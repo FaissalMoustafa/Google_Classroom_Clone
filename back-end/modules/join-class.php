@@ -28,7 +28,7 @@ function classExists($mysqli, $class_id){
     ";
 
     $check_if_class_exists = $mysqli->prepare($stmt_check_if_class_exists);
-    $check_if_class_exists->bind_param('ss',$class_id);
+    $check_if_class_exists->bind_param('s',$class_id);
     $check_if_class_exists->execute();
     $check_if_class_exists->store_result();
 

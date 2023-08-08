@@ -1,9 +1,8 @@
 <?php
+include 'connection.php';
+// $root= $_SERVER["DOCUMENT_ROOT"] . "\\Google_Classroom_Clone\\";
+// include $root . "back-end\\connection.php";
 
-// Initialize Database Connection
-// $rootDirectory = $_SERVER["DOCUMENT_ROOT"] . "\\Google_Classroom_Clone\\";
-// include $rootDirectory . "back-end\\connection.php";
-include "connection.php";
 // Read from request payload
 $userId = $_POST["user_id"];
 $lastName = $_POST["last_name"];
@@ -20,9 +19,9 @@ $getUserQuery->execute();
 $query->bind_result($id, $email, $oldHashedPassword, $oldFirstname, $oldLastname, $type); // Values from database query
 $query->fetch();
 
-$userExists = $query->num_rows();
+$userExists = $query->num_rows(); //returns the number of rows in the result set
 
-//TODO Check if code stops here
+//Check if code stops here
 if (!$userExists) echo json_decode("User doesn't exist");
 
 // Update User
